@@ -1,0 +1,31 @@
+<ion-view cache-view="false" title="Session">
+    <ion-content class="has-header">
+        <div class="list card">
+            <div class="item item-thumbnail-left">
+                <img ng-src="pics/{{session.pic}}">
+                <h3>{{session.time}}</h3>
+				<h3>{{session.room}}</h3>
+                <h2><b>{{session.title}}</b></h2>
+                <p>{{session.speaker}}</p>
+            </div>
+            <div class="item item-body">
+                <p>{{session.description}}</p>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item" ng-click="share()">
+					<i class="icon ion-social-facebook"></i>
+					Share to Facebook
+				</a> 
+				<a class="tab-item" ng-href="http://twitter.com/intent/follow?screen_name={{session.twitter_id}}">
+					<i class="icon ion-person-add"></i>
+					Follow
+				</a>
+				<a class="tab-item" href="#/app/sessions/{{session.id}}/twitterfeed" ng-click="refreshPage()">
+					<i class="icon ion-social-twitter"></i>
+					Twitter Feed
+				</a>				  
+            </div>
+		</div>		
+    </ion-content>
+</ion-view>
+

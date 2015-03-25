@@ -1,0 +1,24 @@
+<ion-view title="To-Do List">
+    <ion-content class="has-header">
+	
+		<ion-list>
+		
+			<ion-item>
+				<div class="button-bar">
+					<a class="button ion-plus-round button-positive" ng-click="addTask()">   Add Task</a>
+					<a class="button ion-trash-a button-assertive" ng-click="removeTask()">   Remove</a>
+				</div>
+			</ion-item>
+
+			<ion-item ng-repeat="task in tasks">
+				<li class="item item-checkbox">
+					<label class="checkbox">
+						<input type="checkbox" ng-model="task.done">
+					</label>
+					{{task.title}}
+				</li>
+			</ion-item>
+			
+		</ion-list>
+    </ion-content>
+</ion-view>

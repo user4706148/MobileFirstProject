@@ -1,0 +1,21 @@
+<ion-view title="Update Status">
+
+    <ion-content class="has-header">
+
+	<form name="myform" ng-submit="clear()">
+        <div class="list list-inset">
+
+            <label class="item item-input">
+                <textarea placeholder="What's on your mind?" ng-model="item.message" rows="10"></textarea>
+            </label>
+
+            <button class="button button-block button-positive" ng-click="post()">
+                Post to Facebook
+            </button>
+			
+        </div>
+	</form>
+	
+    </ion-content>
+
+</ion-view>
